@@ -1051,9 +1051,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7045728074967464229}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 100
+  m_Drag: 1
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1080,21 +1080,68 @@ MonoBehaviour:
   RLWheel: {fileID: 7044690104926706593}
   RRWheel: {fileID: 7044137132597513277}
   suspensionRestDist: 0.5
-  springStrength: 40
-  springDamp: 3
-  springTravel: 0.3
-  tireGrip: 0.6
-  tireMass: 0.05
-  accelInput: 0.5
-  topSpeed: 15
-  torque: 8
+  springStrength: 15000
+  springDamp: 300
+  springTravel: 0.2
+  tireGrip: 0.7
+  tireMass: 4
+  accelInput: 1
+  topSpeed: 12
+  topSpeedCap: 50
+  torque: 1400
+  torqueCap: 2000
   steerIntensity:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.05815631
+      value: 0.08891423
+      inSlope: 0.05365378
+      outSlope: 0.05365378
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.359784
+      value: 0.009529645
+      inSlope: -0.065758035
+      outSlope: -0.065758035
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.4179771
+      outWeight: 0.26644835
+    - serializedVersion: 3
+      time: 0.7138062
+      value: 0.03880538
+      inSlope: 0.16346803
+      outSlope: 0.16346803
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.46270037
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0000143
+      value: 0.099049285
+      inSlope: 0.17379838
+      outSlope: 0.17379838
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.53377575
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  steerInterpolation: 0.02
+  steerInterpolation: 0.2
 --- !u!114 &2145254084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1107,8 +1154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3bca91ad29bb42c0b4f7393312cffef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topSpeedIncreaseValue: 1
-  topSpeedIncreaseInterval: 3
+  scoreSystem: {fileID: 0}
+  gameOverHandler: {fileID: 0}
+  topSpeedIncreaseValue: 2
+  topSpeedIncreaseInterval: 10
   numberOfLives: 2
 --- !u!114 &6304609186538852088
 MonoBehaviour:
